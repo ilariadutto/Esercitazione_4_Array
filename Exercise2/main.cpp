@@ -20,6 +20,13 @@ int main()
 	
 	double V = return_V(S, w, r, n);
 	double ratereturn = rate_of_return(S, V);
+    
+	cout << "S = " << fixed << setprecision(2) << S << ", n = " << n << endl; //fixed per non notazione scientifica 
+	cout << "w = " << ArrayToString(n, w)<< endl;
+	cout << "r = " << ArrayToString(n, r)<< endl;
+	cout << "Rate of return of the portfolio: " << fixed << setprecision(4) << ratereturn << endl; 
+	cout << "V: " << fixed << setprecision(2) << V << endl;
+
 	
 	ofstream printout("result.txt");
 	printout << "S = " << fixed << setprecision(2) << S << ", n = " << n << endl; //fixed per non notazione scientifica 
@@ -27,6 +34,7 @@ int main()
 	printout << "r = " << ArrayToString(n, r)<< endl;
 	printout << "Rate of return of the portfolio: " << fixed << setprecision(4) << ratereturn << endl; 
 	printout << "V: " << fixed << setprecision(2) << V << endl;
+
 	
 }
 
